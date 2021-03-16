@@ -1,12 +1,17 @@
 package com.oocode;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedList;
 
 public class RecentlyUsedList {
-	public Integer length() {
-		return 0;
-	}
-	public void addItem(String item){
+	private Collection<String> List = new LinkedList<String>();
 
+	public Integer length() {
+		return List.size();
+	}
+
+	public void addItem(String item){
+		List.add(item);
 	}
 }
