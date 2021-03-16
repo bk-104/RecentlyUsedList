@@ -1,11 +1,12 @@
 package com.oocode;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 
 public class RecentlyUsedList {
-	private Collection<String> List = new LinkedList<String>();
+	private ArrayList<String> List = new ArrayList<>();
 
 	public Integer length() {
 		return List.size();
@@ -16,6 +17,6 @@ public class RecentlyUsedList {
 	}
 
 	public String getItem(Integer index) {
-		return "teststring";
+		return List.get(index);
 	}
 }
