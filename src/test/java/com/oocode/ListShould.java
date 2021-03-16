@@ -34,8 +34,7 @@ public class ListShould {
 	//We should be able to retrieve items from the list
 	public void ableToRetrieveItemsFromTheList() {
 		RecentlyUsedList list = new RecentlyUsedList();
-		RandomString randomString = new RandomString();
-		String value = randomString.toString();
+		String value= RandomString.getAlphaNumericString(10);
 		list.addItem(value);
 		assertThat(list.getItem(0), is(value));
 	}
@@ -44,10 +43,9 @@ public class ListShould {
 	@Test
 	public void mostRecentItemAddedShouldReturnFirst() {
 		RecentlyUsedList list = new RecentlyUsedList();
-		RandomString randomString = new RandomString();
-		String value = randomString.toString();
+		String value = RandomString.getAlphaNumericString(10);
 		list.addItem(value);
-		String value1 = randomString.toString();
+		String value1 = RandomString.getAlphaNumericString(10);
 		list.addItem(value1);
 		assertThat(list.getItem(0), is(value1));
 		assertThat(list.getItem(1), is(value));
@@ -58,26 +56,25 @@ public class ListShould {
 	//Items in the list are unique, so duplicate insertions should be moved rather than added.
 	public void duplicateInsertionGoesToTop() {
 		RecentlyUsedList list = new RecentlyUsedList();
-		RandomString randomString = new RandomString();
-		String value = randomString.toString();
-		String value1 = randomString.toString();
+		String value = RandomString.getAlphaNumericString(10);
+		String value1 = RandomString.getAlphaNumericString(10);
 		list.addItem(value);
 		list.addItem(value1);
 		list.addItem(value);
 		assertThat(list.getItem(0), is(value));
 	}
 
-	@Test
+    @Test
 	public void itemsInListAreUnique() {
 		RecentlyUsedList list = new RecentlyUsedList();
-		RandomString randomString = new RandomString();
-		String value = randomString.toString();
-		String value1 = randomString.toString();
+		String value = RandomString.getAlphaNumericString(10);
+		String value1 = RandomString.getAlphaNumericString(10);
 		list.addItem(value);
 		list.addItem(value1);
 		list.addItem(value);
 		assertThat(list.length(), is(2));
 	}
+
 }
 
 
