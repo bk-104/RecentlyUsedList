@@ -19,9 +19,11 @@ public class ListShould {
 		assertThat(list.length(), is(0));
 	}
 
-	//We should be able to add things to the list
+	@Test//We should be able to add things to the list
 	public void ableToAddThingsToTheList() {
 		RecentlyUsedList list = new RecentlyUsedList();
+		list.addItem("teststring");
+		assertThat(list.length(), is(1));
 	}
 	//We should be able to retrieve items from the list
 	public void ableToRetrieveItemsFromTheList() {

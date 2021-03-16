@@ -6,4 +6,7 @@ public class RecentlyUsedList {
 	public Integer length() {
 		return 0;
 	}
+	public void addItem(String item){
+
+	}
 }
