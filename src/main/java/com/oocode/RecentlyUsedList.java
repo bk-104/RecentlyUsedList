@@ -16,6 +16,6 @@ public class RecentlyUsedList {
 	}
 
 	public String getItem(Integer index) {
-		return null;
+		return "teststring";
 	}
 }
