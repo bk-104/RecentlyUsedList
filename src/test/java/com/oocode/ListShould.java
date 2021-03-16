@@ -29,7 +29,9 @@ public class ListShould {
 
 	//We should be able to retrieve items from the list
 	public void ableToRetrieveItemsFromTheList() {
-
+		RecentlyUsedList list = new RecentlyUsedList();
+		list.addItem("teststring");
+		assertThat(list.getItem(0), is("teststring"));
 	}
 
 	//The most recent item should be first in the list

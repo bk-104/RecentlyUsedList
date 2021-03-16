@@ -14,4 +14,8 @@ public class RecentlyUsedList {
 	public void addItem(String item){
 		List.add(item);
 	}
+
+	public String getItem(Integer index) {
+		return null;
+	}
 }
